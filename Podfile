@@ -9,4 +9,5 @@ target 'Firebase-PPS' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'SVProgressHUD'
+pod 'Firebase/Auth'
 end

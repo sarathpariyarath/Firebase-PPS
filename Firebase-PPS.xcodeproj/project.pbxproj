@@ -15,6 +15,8 @@
 		37439AA227CCCC8B00D85856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37439AA027CCCC8B00D85856 /* LaunchScreen.storyboard */; };
 		37439AAA27CCCD2D00D85856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37439AA927CCCD2D00D85856 /* GoogleService-Info.plist */; };
 		37439AAC27CCCE9E00D85856 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AAB27CCCE9E00D85856 /* AlertManager.swift */; };
+		37439AAE27CD5B6100D85856 /* CreateACCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */; };
+		37439AB227CD5DA000D85856 /* Firebase Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB127CD5DA000D85856 /* Firebase Manager.swift */; };
 		86A1F2F3E2C65832819FE37D /* Pods_Firebase_PPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		37439AA327CCCC8B00D85856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37439AA927CCCD2D00D85856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37439AAB27CCCE9E00D85856 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateACCViewController.swift; sourceTree = "<group>"; };
+		37439AB127CD5DA000D85856 /* Firebase Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase Manager.swift"; sourceTree = "<group>"; };
 		BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_PPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,17 +71,35 @@
 		37439A9427CCCC8A00D85856 /* Firebase-PPS */ = {
 			isa = PBXGroup;
 			children = (
-				37439A9527CCCC8A00D85856 /* AppDelegate.swift */,
-				37439A9727CCCC8A00D85856 /* SceneDelegate.swift */,
-				37439A9927CCCC8A00D85856 /* LoginViewController.swift */,
-				37439AAB27CCCE9E00D85856 /* AlertManager.swift */,
+				37439AB027CD5B7500D85856 /* Managers */,
+				37439AAF27CD5B6700D85856 /* ViewControllers */,
 				37439A9B27CCCC8A00D85856 /* Main.storyboard */,
 				37439A9E27CCCC8B00D85856 /* Assets.xcassets */,
+				37439A9527CCCC8A00D85856 /* AppDelegate.swift */,
+				37439A9727CCCC8A00D85856 /* SceneDelegate.swift */,
 				37439AA927CCCD2D00D85856 /* GoogleService-Info.plist */,
 				37439AA027CCCC8B00D85856 /* LaunchScreen.storyboard */,
 				37439AA327CCCC8B00D85856 /* Info.plist */,
 			);
 			path = "Firebase-PPS";
+			sourceTree = "<group>";
+		};
+		37439AAF27CD5B6700D85856 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */,
+				37439A9927CCCC8A00D85856 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37439AB027CD5B7500D85856 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				37439AAB27CCCE9E00D85856 /* AlertManager.swift */,
+				37439AB127CD5DA000D85856 /* Firebase Manager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		BD374895A17AEB7E14974A81 /* Pods */ = {
@@ -215,8 +237,10 @@
 			files = (
 				37439AAC27CCCE9E00D85856 /* AlertManager.swift in Sources */,
 				37439A9A27CCCC8A00D85856 /* LoginViewController.swift in Sources */,
+				37439AAE27CD5B6100D85856 /* CreateACCViewController.swift in Sources */,
 				37439A9627CCCC8A00D85856 /* AppDelegate.swift in Sources */,
 				37439A9827CCCC8A00D85856 /* SceneDelegate.swift in Sources */,
+				37439AB227CD5DA000D85856 /* Firebase Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
