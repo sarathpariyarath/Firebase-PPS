@@ -18,6 +18,8 @@
 		37439AB227CD5DA000D85856 /* Firebase Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB127CD5DA000D85856 /* Firebase Manager.swift */; };
 		37439AB427CDE7DD00D85856 /* InsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB327CDE7DD00D85856 /* InsideViewController.swift */; };
 		37439AB627CE172C00D85856 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37439AB527CE172C00D85856 /* GoogleService-Info.plist */; };
+		37439AB827CE37FA00D85856 /* PhoneSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB727CE37FA00D85856 /* PhoneSignUpViewController.swift */; };
+		37439ABA27CE3A0200D85856 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB927CE3A0200D85856 /* OtpViewController.swift */; };
 		86A1F2F3E2C65832819FE37D /* Pods_Firebase_PPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		37439AB127CD5DA000D85856 /* Firebase Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase Manager.swift"; sourceTree = "<group>"; };
 		37439AB327CDE7DD00D85856 /* InsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideViewController.swift; sourceTree = "<group>"; };
 		37439AB527CE172C00D85856 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37439AB727CE37FA00D85856 /* PhoneSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSignUpViewController.swift; sourceTree = "<group>"; };
+		37439AB927CE3A0200D85856 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_PPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +95,8 @@
 			children = (
 				37439AB327CDE7DD00D85856 /* InsideViewController.swift */,
 				37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */,
+				37439AB727CE37FA00D85856 /* PhoneSignUpViewController.swift */,
+				37439AB927CE3A0200D85856 /* OtpViewController.swift */,
 				37439A9927CCCC8A00D85856 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
@@ -239,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37439AB427CDE7DD00D85856 /* InsideViewController.swift in Sources */,
+				37439AB827CE37FA00D85856 /* PhoneSignUpViewController.swift in Sources */,
+				37439ABA27CE3A0200D85856 /* OtpViewController.swift in Sources */,
 				37439AAC27CCCE9E00D85856 /* AlertManager.swift in Sources */,
 				37439A9A27CCCC8A00D85856 /* LoginViewController.swift in Sources */,
 				37439AAE27CD5B6100D85856 /* CreateACCViewController.swift in Sources */,

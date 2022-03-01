@@ -13,6 +13,9 @@ import FirebaseDatabase
 
 class FirebaseManager {
     
+    //VerificationId
+    var verificationId: String?
+    
     static let sharedInstance = FirebaseManager()
     
     //RealtimeDatabase Reference
@@ -86,6 +89,28 @@ class FirebaseManager {
             
         } catch {
             print(error.localizedDescription)
+        }
+    }
+    
+    func verifyPhoneNumber(phoneNumber: String, view: UIViewController, completion: @escaping (_ status: Bool) -> ()) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationId, error in
+            if error == nil {
+                self.verificationId = verificationId
+                completion(true)
+            } else {
+                AlertManager.sharedInstance.alert(view: view, messages: error!.localizedDescription)
+            }
+        }
+    }
+    
+    func verifyOtp(otp: String,view: UIViewController, completion: @escaping (_ status: Bool) -> ()) {
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationId!, verificationCode: otp)
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if error == nil {
+                completion(true)
+            } else {
+                AlertManager.sharedInstance.alert(view: view, messages: error!.localizedDescription)
+            }
         }
     }
 }

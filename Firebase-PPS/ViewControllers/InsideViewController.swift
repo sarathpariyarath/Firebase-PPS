@@ -21,6 +21,7 @@ class InsideViewController: UIViewController {
 
         self.title = "Login Success"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.topItem?.hidesBackButton = true
         
         userEmailLabel.text = email
         
