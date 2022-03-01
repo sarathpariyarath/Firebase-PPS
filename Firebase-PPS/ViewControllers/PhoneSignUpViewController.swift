@@ -19,7 +19,7 @@ class PhoneSignUpViewController: UIViewController {
     
 
     @IBAction func sendCodeClicked(_ sender: Any) {
-        let phoneNumber = "+91\(phoneNumberTextField.text!)"
+        let phoneNumber = phoneNumberTextField.text!
         FirebaseManager.sharedInstance.verifyPhoneNumber(phoneNumber: phoneNumber, view: self) { status in
             if status == true {
                 let otpVC = self.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
