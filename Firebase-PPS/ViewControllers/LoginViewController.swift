@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
         
         FirebaseManager.sharedInstance.loginUserFirebase(email: username, password: password, loader: true, view: self) { status in
             if status == true {
-        
+                 let insideView = self.storyboard?.instantiateViewController(withIdentifier: "InsideViewController") as! InsideViewController
+                self.navigationController?.pushViewController(insideView, animated: true)
             }
         }
     }

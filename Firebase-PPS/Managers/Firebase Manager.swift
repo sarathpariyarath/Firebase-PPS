@@ -25,8 +25,8 @@ class FirebaseManager {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if error == nil {
                 
-                print("SignUp Success")
-                SVProgressHUD.dismiss()
+                SVProgressHUD.showSuccess(withStatus: "Account Created")
+                SVProgressHUD.dismiss(withDelay: 1)
                 completion(true)
                 
             } else {
@@ -40,7 +40,7 @@ class FirebaseManager {
     
     //Login Existing User
     
-    func loginUserFirebase(email: String, password: String, loader: Bool, view: UIViewController, completion: (_ status: Bool) -> ()) {
+    func loginUserFirebase(email: String, password: String, loader: Bool, view: UIViewController, completion: @escaping (_ status: Bool) -> ()) {
         
         if loader == true {
             SVProgressHUD.show(withStatus: "Loging In")
@@ -50,7 +50,8 @@ class FirebaseManager {
         Auth.auth().signIn(withEmail: email, password: password) { authRestult, error in
             if error == nil {
                 SVProgressHUD.showSuccess(withStatus: "Sign In Success")
-                SVProgressHUD.dismiss(withDelay: 3)
+                SVProgressHUD.dismiss(withDelay: 1)
+                completion(true)
             } else {
                 SVProgressHUD.dismiss()
                 AlertManager.sharedInstance.alert(view: view, messages: error!.localizedDescription)

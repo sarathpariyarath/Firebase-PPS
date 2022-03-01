@@ -17,6 +17,7 @@
 		37439AAC27CCCE9E00D85856 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AAB27CCCE9E00D85856 /* AlertManager.swift */; };
 		37439AAE27CD5B6100D85856 /* CreateACCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */; };
 		37439AB227CD5DA000D85856 /* Firebase Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB127CD5DA000D85856 /* Firebase Manager.swift */; };
+		37439AB427CDE7DD00D85856 /* InsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37439AB327CDE7DD00D85856 /* InsideViewController.swift */; };
 		86A1F2F3E2C65832819FE37D /* Pods_Firebase_PPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		37439AAB27CCCE9E00D85856 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateACCViewController.swift; sourceTree = "<group>"; };
 		37439AB127CD5DA000D85856 /* Firebase Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase Manager.swift"; sourceTree = "<group>"; };
+		37439AB327CDE7DD00D85856 /* InsideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideViewController.swift; sourceTree = "<group>"; };
 		BB180EDB48243BAB67D90581 /* Pods_Firebase_PPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_PPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		37439AAF27CD5B6700D85856 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				37439AB327CDE7DD00D85856 /* InsideViewController.swift */,
 				37439AAD27CD5B6100D85856 /* CreateACCViewController.swift */,
 				37439A9927CCCC8A00D85856 /* LoginViewController.swift */,
 			);
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37439AB427CDE7DD00D85856 /* InsideViewController.swift in Sources */,
 				37439AAC27CCCE9E00D85856 /* AlertManager.swift in Sources */,
 				37439A9A27CCCC8A00D85856 /* LoginViewController.swift in Sources */,
 				37439AAE27CD5B6100D85856 /* CreateACCViewController.swift in Sources */,

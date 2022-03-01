@@ -150,6 +150,21 @@
             </objects>
             <point key="canvasLocation" x="1842" y="115"/>
         </scene>
+        <!--Inside View Controller-->
+        <scene sceneID="FHQ-Ys-oIX">
+            <objects>
+                <viewController storyboardIdentifier="InsideViewController" id="873-Sz-ANX" customClass="InsideViewController" customModule="Firebase_PPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sq2-rN-vJu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L0K-iX-Eyn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBT-SV-uKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="115"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="vRQ-YR-pSZ">
             <objects>
