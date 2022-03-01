@@ -157,13 +157,95 @@
                     <view key="view" contentMode="scaleToFill" id="Sq2-rN-vJu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="h0B-Lz-0wk">
+                                <rect key="frame" x="20" y="44" width="374" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="anj-2i-IRB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a04-zF-opB">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biq-6r-K8I">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="72"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lHC-aI-bU3">
+                                        <rect key="frame" x="0.0" y="76" width="374" height="72"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGH-vz-SPA">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.5" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tO-bM-JgZ">
+                                                <rect key="frame" x="273.5" y="0.0" width="100.5" height="72"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="paperplane.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendBtnClicked:" destination="873-Sz-ANX" eventType="touchUpInside" id="IXn-Ph-M3e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="glW-5I-C1O">
+                                        <rect key="frame" x="0.0" y="152" width="374" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWM-6B-sBV">
+                                                <rect key="frame" x="0.0" y="26" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fn-QF-GqS">
+                                                <rect key="frame" x="187" y="26" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylV-2g-sni">
+                                        <rect key="frame" x="0.0" y="228" width="374" height="72"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="signOutBtnPressed:" destination="873-Sz-ANX" eventType="touchUpInside" id="G5I-sL-lBu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7mS-pe-Mhy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="L0K-iX-Eyn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h0B-Lz-0wk" firstAttribute="top" secondItem="L0K-iX-Eyn" secondAttribute="top" id="Mlf-9u-5A1"/>
+                            <constraint firstItem="L0K-iX-Eyn" firstAttribute="trailing" secondItem="h0B-Lz-0wk" secondAttribute="trailing" constant="20" id="Mxy-PV-S2p"/>
+                            <constraint firstItem="h0B-Lz-0wk" firstAttribute="leading" secondItem="L0K-iX-Eyn" secondAttribute="leading" constant="20" id="yrZ-E1-KXZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="eGH-vz-SPA" id="PKa-rJ-uVD"/>
+                        <outlet property="msgDisplayLabel" destination="1fn-QF-GqS" id="ewg-uY-87Y"/>
+                        <outlet property="userEmailLabel" destination="biq-6r-K8I" id="dbo-jZ-cpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBT-SV-uKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="115"/>
+            <point key="canvasLocation" x="2648" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vRQ-YR-pSZ">
@@ -185,6 +267,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

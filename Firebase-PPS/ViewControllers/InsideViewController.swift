@@ -6,26 +6,47 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class InsideViewController: UIViewController {
 
+    let email = Auth.auth().currentUser?.email
+    let firebaseManager = FirebaseManager.sharedInstance
+    
+    @IBOutlet weak var msgDisplayLabel: UILabel!
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var userEmailLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Login Success"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        userEmailLabel.text = email
+        
+        firebaseManager.chatObserver { value in
+            let valueString = value as! String
+            print(valueString)
+            self.msgDisplayLabel.text = valueString
+        }
+    }
+    //Signout Clicked
+    @IBAction func signOutBtnPressed(_ sender: Any) {
+        firebaseManager.signOutUserFirebase { status in
+            if status == true {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Send Button Clicked
+    @IBAction func sendBtnClicked(_ sender: Any) {
+        let message = messageTextField.text
+        
+        if message?.isEmpty == true {
+            AlertManager.sharedInstance.alert(view: self, messages: "Please Enter Something")
+        } else {
+            firebaseManager.newMessage(message: message ?? "nil")
+        }
     }
-    */
-
 }

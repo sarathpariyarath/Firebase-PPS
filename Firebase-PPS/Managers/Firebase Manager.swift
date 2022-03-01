@@ -9,10 +9,28 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import SVProgressHUD
+import FirebaseDatabase
 
 class FirebaseManager {
     
     static let sharedInstance = FirebaseManager()
+    
+    //RealtimeDatabase Reference
+    var ref: DatabaseReference!
+    
+    //Chat
+    func newMessage(message: String) {
+        ref = Database.database().reference()
+        ref.child("chats").setValue(["message" : message])
+    }
+    
+    //Chat Observer
+    func chatObserver(completion: @escaping (_ value: Any) -> ()) {
+        ref = Database.database().reference()
+        ref.child("chats").observe(.childChanged) { (snapshot) in
+            completion(snapshot.value!)
+        }
+    }
     
     //Create New Acc
     func createNewAccount(email: String, password: String, loader: Bool, view: UIViewController, completion: @escaping (_ status: Bool) -> ()) {
@@ -60,4 +78,14 @@ class FirebaseManager {
         
     }
     
+    func signOutUserFirebase(completion: (_ status: Bool) -> ()) {
+        do {
+            
+            try Auth.auth().signOut()
+            completion(true)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
