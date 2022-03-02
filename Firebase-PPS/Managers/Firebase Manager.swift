@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 class FirebaseManager {
     
+    let userDefaults = UserDefaults.standard
+    
     //VerificationId
     var verificationId: String?
     

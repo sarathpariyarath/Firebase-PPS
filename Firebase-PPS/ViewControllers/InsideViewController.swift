@@ -19,9 +19,10 @@ class InsideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         self.title = "Login Success"
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated: true)  
         
         userEmailLabel.text = email
         
@@ -35,6 +36,7 @@ class InsideViewController: UIViewController {
     @IBAction func signOutBtnPressed(_ sender: Any) {
         firebaseManager.signOutUserFirebase { status in
             if status == true {
+                firebaseManager.userDefaults.set(false, forKey: "userLog")
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -50,4 +52,5 @@ class InsideViewController: UIViewController {
             firebaseManager.newMessage(message: message ?? "nil")
         }
     }
+    
 }
